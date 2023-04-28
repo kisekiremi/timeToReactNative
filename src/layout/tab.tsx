@@ -17,8 +17,12 @@ import ProfileContainer from '../pages/profile'
 
 //  Stack - OutSide
 import SysInfo from '../views/sysInfo'
+import NewMsgInfo from '../views/newMsgInfo'
 
-const HomeTab = () => {
+import CusScreen from '../components/CustomPage'
+
+// @ts-ignore
+const HomeTab = ({ navigation: { navigate } }) => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -38,7 +42,7 @@ const HomeTab = () => {
         },
         headerRight: () =>
           route.name === '消息' ? (
-            <TouchableOpacity onPress={() => alert('settings !')}>
+            <TouchableOpacity onPress={() => navigate('新消息通知')}>
               <Ionicons name="md-settings" size={22} style={{ marginRight: 15 }} />
             </TouchableOpacity>
           ) : route.name === '动态' ? (
@@ -51,10 +55,10 @@ const HomeTab = () => {
       <Tab.Group screenOptions={{ headerShown: false }}>
         <Tab.Screen name="首页" component={HomeContainer}></Tab.Screen>
       </Tab.Group>
-      <Tab.Group screenOptions={{ headerShown: true }}>
+      <Tab.Group>
         <Tab.Screen name="动态" component={ActivityContainer}></Tab.Screen>
       </Tab.Group>
-      <Tab.Group screenOptions={{}}>
+      <Tab.Group>
         <Tab.Screen name="消息" component={MessageContainer}></Tab.Screen>
       </Tab.Group>
       <Tab.Group screenOptions={{ headerShown: false }}>
@@ -65,6 +69,16 @@ const HomeTab = () => {
 }
 
 const AppStack = () => {
+  // const StackScreenCard = ({ name, componentName, title }) => {
+  //   return (
+  //     <Stack.Screen
+  //       name={name}
+  //       component={componentName}
+  //       options={{ title: { title }, headerTintColor: 'white', headerTitleAlign: 'center' }}
+  //     />
+  //   )
+  // }
+
   return (
     <Stack.Navigator>
       <Stack.Group screenOptions={{ headerShown: false }}>
@@ -73,6 +87,14 @@ const AppStack = () => {
 
       <Stack.Group screenOptions={{}}>
         <Stack.Screen name="系统通知" component={SysInfo} />
+      </Stack.Group>
+
+      <Stack.Group
+        screenOptions={{
+          headerStyle: { backgroundColor: '#fafafa' }
+        }}
+      >
+        <Stack.Screen name="新消息通知" component={NewMsgInfo} />
       </Stack.Group>
     </Stack.Navigator>
   )

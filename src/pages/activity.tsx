@@ -8,8 +8,7 @@ const mg = require('../assets/images/role_bunny.png')
 export default () => {
   let mma = 1
   return (
-    // <ScrollView minimumZoomScale={0.5} maximumZoomScale={1.5}></ScrollView>
-    <ScrollView>
+    <ScrollView style={{ flex: 1, height: 'auto' }}>
       <View>
         <Text style={{ textAlign: 'center', margin: 40, fontSize: 24 }}>Scroll me plz</Text>
       </View>
