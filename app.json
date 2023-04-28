@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "timeToReactNative",
+    "slug": "timeToReactNative",
+    "author": "kisekiremi",
+    "version": "1.0.0",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "assets/static/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "assets/static/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "assets/static/favicon.png"
+    }
+  }
+}
