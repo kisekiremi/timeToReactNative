@@ -1,7 +1,12 @@
-// import * as React from 'react'
 import { StyleSheet } from 'react-native'
 
 const tt = StyleSheet.create({
+  inputBox: {
+    padding: 15,
+    margin: 20,
+    borderWidth: 1,
+    borderColor: '#333'
+  },
   flexBox: {
     // height: 750,
     display: 'flex',

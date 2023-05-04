@@ -1,13 +1,14 @@
 import React from 'react'
-import { View, Text, Button, Image, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native'
 
 import second from '../style/style_app'
+import RefreshViewer from '../components/RefreshViewer'
 
 // @ts-ignore
 export default ({ navigation: { navigate } }) => {
   return (
     <>
-      <ScrollView>
+      <RefreshViewer>
         <View
           style={{
             backgroundColor: '#f6ccF4',
@@ -39,7 +40,7 @@ export default ({ navigation: { navigate } }) => {
             message is huge, glorious
           </Text>
         </View>
-      </ScrollView>
+      </RefreshViewer>
     </>
   )
 }

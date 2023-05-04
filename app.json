@@ -5,23 +5,26 @@
     "author": "kisekiremi",
     "version": "1.0.0",
     "userInterfaceStyle": "light",
+    "orientation": "portrait",
     "splash": {
-      "image": "assets/static/splash.png",
+      "image": "./src/assets/static/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.apps.app1"
     },
     "android": {
+      "bundleIdentifier": "com.apps.app1",
       "adaptiveIcon": {
-        "foregroundImage": "assets/static/adaptive-icon.png",
+        "foregroundImage": "./src/assets/static/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "assets/static/favicon.png"
+      "favicon": "./src/assets/static/favicon.png"
     }
   }
 }

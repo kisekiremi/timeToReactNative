@@ -7,7 +7,9 @@
     "dev": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "expo:b:android": "expo build -p android",
+    "expo:b:ios": "expo build -p ios"
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",

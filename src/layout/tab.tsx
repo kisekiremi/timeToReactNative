@@ -40,6 +40,7 @@ const HomeTab = ({ navigation: { navigate } }) => {
               return <AntDesign size={24} color={color} name={focused ? 'meho' : 'meh'} />
           }
         },
+
         headerRight: () =>
           route.name === '消息' ? (
             <TouchableOpacity onPress={() => navigate('新消息通知')}>
@@ -69,16 +70,6 @@ const HomeTab = ({ navigation: { navigate } }) => {
 }
 
 const AppStack = () => {
-  // const StackScreenCard = ({ name, componentName, title }) => {
-  //   return (
-  //     <Stack.Screen
-  //       name={name}
-  //       component={componentName}
-  //       options={{ title: { title }, headerTintColor: 'white', headerTitleAlign: 'center' }}
-  //     />
-  //   )
-  // }
-
   return (
     <Stack.Navigator>
       <Stack.Group screenOptions={{ headerShown: false }}>
@@ -91,7 +82,8 @@ const AppStack = () => {
 
       <Stack.Group
         screenOptions={{
-          headerStyle: { backgroundColor: '#fafafa' }
+          headerStyle: { backgroundColor: '#f2f2f2' },
+          headerLargeTitleShadowVisible: false
         }}
       >
         <Stack.Screen name="新消息通知" component={NewMsgInfo} />
