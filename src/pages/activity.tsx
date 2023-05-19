@@ -10,7 +10,7 @@ export default () => {
   return (
     <>
       <RefreshViewer>
-        <Text style={{ textAlign: 'center', margin: 40, fontSize: 24 }}>Scroll me plz</Text>
+        <Text style={{ textAlign: 'center', margin: 40, fontSize: 24 }}>Scroll Container</Text>
 
         <Image style={{ ...second.image, maxHeight: 550 }} source={mg} />
         <Image style={{ ...second.image, maxHeight: 550 }} source={mg} />

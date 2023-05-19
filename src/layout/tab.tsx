@@ -17,7 +17,8 @@ import ProfileContainer from '../pages/profile'
 
 //  Stack - OutSide
 import SysInfo from '../views/sysInfo'
-import NewMsgInfo from '../views/newMsgInfo'
+import NewMsgInfo from '../views/newMsgInfo/index'
+import NewMsgInfo_select from '../views/newMsgInfo/modules/index'
 
 import CusScreen from '../components/CustomPage'
 
@@ -87,6 +88,7 @@ const AppStack = () => {
         }}
       >
         <Stack.Screen name="新消息通知" component={NewMsgInfo} />
+        <Stack.Screen name="前5个选项(需回调)" component={NewMsgInfo_select} />
       </Stack.Group>
     </Stack.Navigator>
   )

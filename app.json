@@ -2,7 +2,6 @@
   "expo": {
     "name": "timeToReactNative",
     "slug": "timeToReactNative",
-    "author": "kisekiremi",
     "version": "1.0.0",
     "userInterfaceStyle": "light",
     "orientation": "portrait",
@@ -17,7 +16,6 @@
       "bundleIdentifier": "com.apps.app1"
     },
     "android": {
-      "bundleIdentifier": "com.apps.app1",
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/static/adaptive-icon.png",
         "backgroundColor": "#ffffff"

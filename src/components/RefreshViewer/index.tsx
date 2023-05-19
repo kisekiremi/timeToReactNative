@@ -12,7 +12,7 @@ export default (props: any) => {
   }
 
   const getData = () => {
-    return new Promise((res, jre) => {
+    return new Promise((res, _rej) => {
       console.log('data gotta')
       wait(1500).then(() => res(true))
     })
