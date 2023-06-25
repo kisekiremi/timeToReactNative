@@ -25,7 +25,7 @@ export default ({ navigation: { navigate } }) => {
         <Text style={second.small_text}>有以下消息通知我</Text>
 
         <TouchableOpacity
-          onPress={() => navigate('前5个选项(需回调)')}
+          onPress={() => navigate('消息提示')}
           style={[second.flexBox, second.horizonBox]}
         >
           <View style={[second.borderBox]}>

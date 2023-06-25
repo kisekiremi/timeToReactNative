@@ -55,16 +55,16 @@ const HomeTab = ({ navigation: { navigate } }) => {
       })}
     >
       <Tab.Group screenOptions={{ headerShown: false }}>
-        <Tab.Screen name="首页" component={HomeContainer}></Tab.Screen>
+        <Tab.Screen name="首页" component={HomeContainer} />
       </Tab.Group>
       <Tab.Group>
-        <Tab.Screen name="动态" component={ActivityContainer}></Tab.Screen>
+        <Tab.Screen name="动态" component={ActivityContainer} />
       </Tab.Group>
-      <Tab.Group>
-        <Tab.Screen name="消息" component={MessageContainer}></Tab.Screen>
+      <Tab.Group screenOptions={{ headerTitle: '' }}>
+        <Tab.Screen name="消息" component={MessageContainer} />
       </Tab.Group>
       <Tab.Group screenOptions={{ headerShown: false }}>
-        <Tab.Screen name="我的" component={ProfileContainer}></Tab.Screen>
+        <Tab.Screen name="我的" component={ProfileContainer} />
       </Tab.Group>
     </Tab.Navigator>
   )
@@ -72,12 +72,16 @@ const HomeTab = ({ navigation: { navigate } }) => {
 
 const AppStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerBackTitleVisible: false
+      }}
+    >
       <Stack.Group screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={HomeTab} />
       </Stack.Group>
 
-      <Stack.Group screenOptions={{}}>
+      <Stack.Group>
         <Stack.Screen name="系统通知" component={SysInfo} />
       </Stack.Group>
 
@@ -88,7 +92,7 @@ const AppStack = () => {
         }}
       >
         <Stack.Screen name="新消息通知" component={NewMsgInfo} />
-        <Stack.Screen name="前5个选项(需回调)" component={NewMsgInfo_select} />
+        <Stack.Screen name="消息提示" component={NewMsgInfo_select} />
       </Stack.Group>
     </Stack.Navigator>
   )
