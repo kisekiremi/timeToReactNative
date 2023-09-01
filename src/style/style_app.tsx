@@ -52,7 +52,7 @@ const tt = StyleSheet.create({
     color: '#939393'
   },
   image_banner: {
-    maxWidth: '100%',
+    width: 'auto',
     height: 200
   },
   image: {

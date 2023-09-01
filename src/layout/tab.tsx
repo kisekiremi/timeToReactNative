@@ -60,7 +60,7 @@ const HomeTab = ({ navigation: { navigate } }) => {
       <Tab.Group>
         <Tab.Screen name="动态" component={ActivityContainer} />
       </Tab.Group>
-      <Tab.Group screenOptions={{ headerTitle: '' }}>
+      <Tab.Group screenOptions={{}}>
         <Tab.Screen name="消息" component={MessageContainer} />
       </Tab.Group>
       <Tab.Group screenOptions={{ headerShown: false }}>
@@ -73,9 +73,11 @@ const HomeTab = ({ navigation: { navigate } }) => {
 const AppStack = () => {
   return (
     <Stack.Navigator
-      screenOptions={{
-        headerBackTitleVisible: false
-      }}
+      screenOptions={
+        {
+          // headerBackTitleStyle: { fontSize: 10 }
+        }
+      }
     >
       <Stack.Group screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={HomeTab} />
@@ -88,7 +90,8 @@ const AppStack = () => {
       <Stack.Group
         screenOptions={{
           headerStyle: { backgroundColor: '#f2f2f2' },
-          headerLargeTitleShadowVisible: false
+          headerLargeTitleShadowVisible: false,
+          headerBackTitleVisible: false
         }}
       >
         <Stack.Screen name="新消息通知" component={NewMsgInfo} />
